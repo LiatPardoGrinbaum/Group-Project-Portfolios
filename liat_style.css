@@ -268,3 +268,24 @@ li .link {
 .welcome-img {
   background: url();
 }
+
+@media (max-width: 500) {
+  .container-main {
+    display: grid;
+    /* background: rgb(170, 255, 248); */
+    max-width: 100%;
+    /* height: 100%; */
+    gap: 0.5rem;
+    padding: 10px;
+    /* align-items: center; */
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content1 "
+      "content-img"
+      "about "
+      "content2 "
+      "art"
+      "content3 ";
+  }
+}
