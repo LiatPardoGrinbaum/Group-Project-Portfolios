@@ -5,10 +5,217 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benjamin Portfolio</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: rgb(230, 240, 240);
+            color: rgb(7, 0, 0);
+        }
+
+        .container {
+            margin: 1rem;
+            width: 95vw;
+            height: 100%;
+        }
+
+        header {
+            height: 35vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 2.8rem;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        h1, h2, p, h3, a {
+            margin-left: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        main {
+            height: 50vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .img {
+            border-radius: 20px;
+            background: url(/Group-Project-Portfolios/img_benjamin/my_img.jpg) no-repeat top center/cover;
+        }
+
+        .about {
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+        }
+
+        .capabilities {
+            line-height: 3rem;
+        }
+
+        footer {
+            width: 100%;
+            height: 5vh;
+        }
+
+        footer .projects {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .projects .box {
+            margin-top: 3rem;
+            margin-left: 20px;
+            height: 6vh;
+            width: 30vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(202, 209, 209);
+            border-radius: 20px;
+        }
+
+        footer .projects .box a {
+            padding: 1rem 3rem;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            transition: all, 0.3s ease;
+        }
+
+        footer .projects .box:hover {
+            opacity: 0.7;
+            font-weight: 700;
+        }
+
+        @media (max-width: 1100px) {
+
+            .container {
+                width: 100vw;
+                margin: 0;
+            }
+
+            header {
+                align-items: center;
+                text-align: center;
+            }
+
+            main {
+                width: 100vw;
+                height: 100vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+
+            .about {
+                grid-template-rows: 1fr 1fr;
+                text-align: center;
+                margin: 0rem 10vw;
+            }
+
+            .about-box {
+                line-height: 2.5rem;
+            }
+
+            h1 {
+            font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            h1, h2, p, h3, a {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            footer {
+                height: 30vh;
+            }
+
+            footer .projects {
+                flex-direction: column;
+            }
+
+            footer .projects .box {
+                width: 85vw;
+            }
+        }
+
+
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hello my name is Benjamin Rotlevy</h1>
+        <header>
+            <h1>Benjamin Rotlevy</h1>
+            <h2>I am a Full Stack developer</h2>
+            <p>I work with love</p>
+        </header>
+        <main>
+            <div class="about">
+                <div class="about-box">
+                    <h2>About Me</h2>
+                    <p>My name is Benjamin Rotlevy. i made this portfolio page so you can view my projects. i'm living in Bnei-Brak, Israel </p>
+                </div>
+                <div class="capabilities">
+                    <h3>capabilities</h3>
+                    <p>Web developer <br> java engineer <br> front-End developer <br> back-End developer</p>
+                </div>
+            </div>
+            <div class="img">
+
+            </div>
+        </main>
+        <footer>
+            <div class="projects">
+                <div class="box net">
+                    <a href="https://funny-granita-b445e5.netlify.app/">My Mockup to Tesla website</a>
+                </div>
+                <div class="box git">
+                    <a href="https://github.com/benrotlevy">My github account</a>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
