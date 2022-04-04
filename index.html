@@ -31,6 +31,10 @@
     }
 
     .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
       background: rgb(202, 255, 179);
       width: 300px;
       height: 400px;
@@ -57,14 +61,27 @@
       width: 200px;
       height: auto;
     }
+
+    #benny_img , #liat_img{
+      border-radius: 50%;
+      width: 50%;
+      height: 50%;
+      justify-content: center;
+      text-align: center;
+    }
+
   </style>
   <body>
     <header>
       <h1>Group Portfolios</h1>
     </header>
     <div class="container">
-      <div class="Liat card"></div>
+      <div class="Liat card">
+        <img src="./images/liat_pic.JPG" id="liat_img" alt="MyImage">
+        <a href="./LiatPortfolio.html">My Page</a>
+      </div>
       <div class="Benny card">
+        <img src="./Benny-folder/images/MyPhotos/nav-img.jpg" id="benny_img" alt="MyImage">
         <a href="./Benny-folder/benny.html">My Page</a>
       </div>
       <div class="Benjamin card"></div>
