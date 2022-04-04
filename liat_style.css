@@ -11,6 +11,14 @@
   width: 200px;
   height: auto;
 } */
+
+/* :root {
+  --primary-color:
+  --secondary-color: rgb(255, 205, 147);
+  --primary-font:
+  --secondary-font: 
+  --background-color:
+} */
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +61,7 @@ header {
 .navbar ul {
   display: flex;
   text-align: center;
+  align-items: center;
   max-width: 100%;
   margin: auto;
   background-color: rgba(103, 157, 172, 0.7);
@@ -62,9 +71,19 @@ header {
   top: 0;
 }
 
-.navbar li {
+.navbar ul li {
   list-style-type: none;
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  font-family: "Belleza", sans-serif;
+}
+.navbar .link a:hover {
+  list-style-type: none;
+  padding: 0.3rem 0.5rem;
+  font-family: "Belleza", sans-serif;
+  background: rgb(188, 238, 250);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: rgb(62, 105, 131);
 }
 
 .navbar a {
@@ -75,13 +94,14 @@ header {
   font-weight: bolder;
 }
 
-.link a:hover {
-  color: rgb(3, 7, 137);
+.link a {
+  padding: 3px 10px;
 }
 
-.link:hover {
+/* .link:hover {
   background: rgb(188, 238, 250);
-}
+  color: rgba(103, 157, 172, 0.7);
+} */
 
 .logo {
   flex: 1;
@@ -93,7 +113,7 @@ header {
   color: rgb(255, 205, 147);
 }
 
-.link {
+li .link {
   font-style: black;
 }
 
@@ -109,14 +129,19 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "content1 content1 content-img"
-    "content2 content2 content2"
+    "about about content2"
+    "art art art"
     "content3  content3 content3";
 }
 .content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   grid-area: content1;
   padding: 0.5rem;
   border: 2px solid #f4f4f4;
   background-color: rgba(103, 157, 172, 0.7);
+  text-align: center;
 }
 
 .content-img {
@@ -133,10 +158,23 @@ header {
 .content-img img {
   padding: 5px;
   margin: auto;
-  width: 600px;
+  width: 400px;
   height: auto;
 }
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: about;
+  background-color: rgba(103, 157, 172, 0.7);
+  border: 2px solid #f4f4f4;
+  /* text-align: center; */
+  padding: 1rem;
+}
 
+.about .journey {
+  font-style: italic;
+}
 .content2 {
   display: flex;
   justify-content: center;
@@ -172,7 +210,12 @@ header {
 
 .content2 a:hover {
   background: rgb(170, 255, 248);
-  color: black;
+  color: rgb(62, 105, 131);
+}
+.content1 h2 {
+  margin-bottom: 0.5rem;
+  color: rgb(255, 205, 147);
+  font-size: 50px;
 }
 .content3 {
   display: flex;
@@ -194,13 +237,25 @@ header {
 .content3 .contact-flex {
   display: flex;
 }
+
+.art {
+  grid-area: art;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: art;
+  background-color: rgba(103, 157, 172, 0.7);
+  border: 2px solid #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+}
 .ul-style {
   list-style-type: none;
   padding-left: 0px;
 }
 
 .li-style {
-  margin: 5px 10px;
+  margin: 5px 5px;
   font-size: 30px;
   color: white;
 }
