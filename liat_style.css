@@ -76,14 +76,14 @@ header {
   padding: 0.3rem 0.5rem;
   font-family: "Belleza", sans-serif;
 }
-.navbar .link a:hover {
+.navbar .link:hover {
   list-style-type: none;
   padding: 0.3rem 0.5rem;
+
   font-family: "Belleza", sans-serif;
   background: rgb(188, 238, 250);
   border: 1px solid white;
   border-radius: 5px;
-  color: rgb(62, 105, 131);
 }
 
 .navbar a {
@@ -93,7 +93,9 @@ header {
   font-size: 1.5rem;
   font-weight: bolder;
 }
-
+.navbar a:hover {
+  color: rgb(62, 105, 131);
+}
 .link a {
   padding: 3px 10px;
 }
@@ -158,7 +160,8 @@ li .link {
 .content-img img {
   padding: 5px;
   margin: auto;
-  width: 400px;
+  width: 100%;
+  max-width: 350px;
   height: auto;
 }
 .about {
@@ -269,23 +272,41 @@ li .link {
   background: url();
 }
 
-@media (max-width: 500) {
+@media (max-width: 1000px) {
   .container-main {
     display: grid;
-    /* background: rgb(170, 255, 248); */
     max-width: 100%;
-    /* height: 100%; */
     gap: 0.5rem;
     padding: 10px;
-    /* align-items: center; */
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "content1 content-img "
+      "about about"
+      "content2 content2"
+      " art art"
+      " content3 content3 ";
+  }
+}
+
+@media (max-width: 600px) {
+  .container-main {
+    display: grid;
+    max-width: 100%;
+    gap: 0.5rem;
+    padding: 10px;
     height: auto;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "content1 "
+      "content1  "
       "content-img"
       "about "
-      "content2 "
+      "content2"
       "art"
       "content3 ";
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
   }
 }
