@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #c72727;
+    --primary-color: #cb5020;
     --secondary-color: #f99500;
     --light-color: #f3f3f3;
     --dark-color: #333;
@@ -50,7 +50,7 @@
   
   /* Utility */
   .container {
-    max-width: var(--max-width);
+    /* max-width: var(--max-width); */
     margin: auto;
     padding: 0 1rem;
     overflow: hidden;
@@ -67,9 +67,9 @@
     }
     
     .category-date { background: var(--sports-color) }
-    .category-fron-end { background: var(--ent-color) }
+    .category-front-end { background: var(--ent-color) }
     .category-back-end { background: var(--ent-color) }
-    .category-python { background: var(--ent-color) }
+    .category-python { background: var(--secondary-color) }
     .category-personal { background: var(--ent-color) }
     .category-tech { background: var(--tech-color) }
     /* .category-tech { background: var(--tech-color) } */
@@ -104,6 +104,8 @@
     position: sticky;
     top: 0;
     z-index: 2;
+    /* height: 20px; */
+    /* width: 100vw; */
 }
   
 #main-nav .container {
@@ -111,9 +113,12 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 padding: 1rem;
 align-items: center;
+background: linear-gradient(blue,rgba(169, 169, 195, 0.758));
+/* background: url('./images/MyPhot'); */
 /* justify-content: space-around; */
 }
-  
+
+
 #main-nav .profile-img {
 width: 80px;
 height: 80px;
@@ -131,6 +136,7 @@ display: flex;
 }
 
 #main-nav ul li a {
+/* border: 2px black solid; */
 padding: 0.75rem;
 font-weight: bold;
 }
@@ -145,15 +151,50 @@ background: var(--light-color);
 color: var(--dark-color);
 }
 
-
   
 #main-nav .social i {
-color: #777;
+color: white;
 margin-right: .5rem;
 }
 
 #main-nav .social i:hover {
 color: var(--primary-color);
+}
+
+@media(max-width:1000px){
+    #main-nav {
+        display: none;
+        /* width: 50vw; */
+        
+    }
+    
+    #showcase .container {
+        /* border: 2px solid black; */
+        height: 100vh;
+        width: 100%;
+        /* justify-content: center; */
+        
+        
+    }
+
+    #showcase .showcase-container {
+        display: flex;
+        /* grid-template-columns: repeat(2, 1fr); */
+        justify-content:center;
+        /* background: red; */
+        align-items: center;
+        /* height: 40vh; */
+        }
+
+    #showcase .showcase-content {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        text-align: center;
+        /* border: 2px yellow solid; */
+        width: 150%;
+
+    }
 }
 
 /* Showcase */
