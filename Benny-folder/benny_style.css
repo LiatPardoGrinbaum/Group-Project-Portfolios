@@ -145,9 +145,7 @@ background: var(--light-color);
 color: var(--dark-color);
 }
 
-#main-nav .social {
-/* justify-self: center; */
-}
+
   
 #main-nav .social i {
 color: #777;
